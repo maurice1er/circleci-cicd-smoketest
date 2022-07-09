@@ -18,6 +18,10 @@ jobs:
             else
               return 1
             fi
+      - run:
+          name: on error
+          command: echo "smoke test Error!"
+          when: on_fail
 
 workflows:
   myworkflow:
